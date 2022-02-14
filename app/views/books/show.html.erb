@@ -1,1 +1,11 @@
-<h1>show.html</h1>
+<% if flash[:notice] %>
+  <p class=create><%= flash[:notice] %></p>
+<% end %>
+
+<p class=showtitle><strong>title:</strong> <%= @book.title %></p>
+
+<p class=showbody><strong>body:</strong> <%= @book.body %></p>
+        
+<%= link_to 'edit', edit_book_path%>
+|
+<%= link_to 'back', books_path%>
